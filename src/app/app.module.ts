@@ -5,20 +5,21 @@ import { RouterModule } from '@angular/router';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
-import { PagesModule } from './pages/pages.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { HomeModule } from './modules/home/home.module';
 // import { SwiperModule } from 'swiper/angular';
 
 @NgModule({
   declarations: [
     AppComponent,
+
    ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    PagesModule,
     RouterModule,
     BrowserAnimationsModule,
+    HomeModule
     // SwiperModule
   ],
   providers: [],

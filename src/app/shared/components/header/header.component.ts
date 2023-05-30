@@ -6,47 +6,91 @@ import { Component, HostListener, Input } from '@angular/core';
   styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent {
-  @Input () headerShadow : string | undefined;
+  @Input() header__white: string | undefined
 
-  headerSticky : boolean = false;
-  showSidebar : boolean = false;
-  showHomeDropdown : boolean = false;
-  showCoursesDropdown : boolean = false;
-  showBlogDropdown : boolean = false;
-  showPagesDropdown : boolean = false;
+  headerSticky: boolean = false;
+  showCart: boolean = false;
+  showSidebar: boolean = false;
+  showHomeDropdown: boolean = false;
+  showCoursesDropdown: boolean = false;
+  showBlogDropdown: boolean = false;
+  showPagesDropdown: boolean = false;
 
-  @HostListener('window:scroll',['$event']) onscroll () {
-    if(window.scrollY > 80){
+  // cart quantity
+  count = 1;
+  countTwo = 1;
+  countThree = 1;
+
+  // sticky nav
+  @HostListener('window:scroll', ['$event']) onscroll() {
+    if (window.scrollY > 80) {
       this.headerSticky = true
     }
-    else{
+    else {
       this.headerSticky = false
     }
   }
-
+  // handleCartToggle
+  handleCartToggle() {
+    this.showCart = true;
+  }
+  handleCartClose() {
+    this.showCart = false;
+  }
+  handleAddCart(number: string) {
+    if (number === 'one') {
+      this.count++
+    }
+    if (number === 'two') {
+      this.countTwo++
+    }
+    if (number === 'three') {
+      this.countThree++
+    }
+  }
+  handleDecreaseCart(number: string) {
+    if (number === 'one' && this.count > 1) {
+      this.count--
+    }
+    if (number === 'two' && this.countTwo > 1) {
+      this.countTwo--
+    }
+    if (number === 'one' && this.countThree > 1) {
+      this.countThree--
+    }
+  }
   // handleSidebar
-  handleSidebar () {
+  handleSidebar() {
     this.showSidebar = true;
   }
-  handleSidebarClose () {
+  handleSidebarClose() {
     this.showSidebar = false;
   }
 
+
   // home dropdown
-  homeDropdown () {
+  homeDropdown() {
     this.showHomeDropdown = !this.showHomeDropdown
   }
   // coursesDropdown
-  coursesDropdown () {
+  coursesDropdown() {
     this.showCoursesDropdown = !this.showCoursesDropdown
   }
 
   // blogDropdown
-  blogDropdown () {
+  blogDropdown() {
     this.showBlogDropdown = !this.showBlogDropdown
   }
   // pagesDropDown
-  pagesDropDown () {
+  pagesDropDown() {
     this.showPagesDropdown = !this.showPagesDropdown
+  }
+
+  constructor() {
+
+  }
+
+  ngOnInit(): void {
+
   }
 }
