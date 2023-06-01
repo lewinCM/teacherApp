@@ -1,16 +1,15 @@
 <div id="header-sticky"
-  [ngClass]="headerSticky ? 'header__area header__transparent header__padding sticky' : 'header__area header__transparent header__padding' "
+  [ngClass]="headerSticky ? 'header__area header__transparent header__padding sticky' : 'header__area header__transparent header__padding'"
   [class.header__white]="header__white">
   <div class="container-fluid">
     <div class="row align-items-center">
       <div class="col-xxl-3 col-xl-3 col-lg-4 col-md-2 col-sm-4 col-6">
         <div class="header__left d-flex">
           <div class="logo">
-            <a [routerLink]="['/']">
+            <a [routerLink]="['/home']">
               <img *ngIf="header__white && !headerSticky else elseImg" alt="logo" />
-
               <ng-template #elseImg>
-                <img src="" alt="logo">
+                <img src="../../../../favicon.ico" alt="">
               </ng-template>
             </a>
           </div>
@@ -18,7 +17,7 @@
             <nav>
               <ul>
                 <li>
-                  <a [routerLink]="['/courses']" class="cat-menu d-flex align-items-center">
+                  <a [routerLink]="['/category']" class="cat-menu d-flex align-items-center">
                     <div class="cat-dot-icon d-inline-block">
                       <svg viewBox="0 0 276.2 276.2">
                         <g>
@@ -26,21 +25,21 @@
                             <path class="cat-dot"
                               d="M33.1,2.5C15.3,2.5,0.9,17,0.9,34.8s14.5,32.3,32.3,32.3s32.3-14.5,32.3-32.3S51,2.5,33.1,2.5z" />
                             <path class="cat-dot"
-                              d="M137.7,2.5c-17.8,0-32.3,14.5-32.3,32.3s14.5,32.3,32.3,32.3c17.8,0,32.3-14.5,32.3-32.3S155.5,2.5,137.7,2.5    z" />
+                              d="M137.7,2.5c-17.8,0-32.3,14.5-32.3,32.3s14.5,32.3,32.3,32.3c17.8,0,32.3-14.5,32.3-32.3S155.5,2.5,137.7,2.5z" />
                             <path class="cat-dot"
                               d="M243.9,67.1c17.8,0,32.3-14.5,32.3-32.3S261.7,2.5,243.9,2.5S211.6,17,211.6,34.8S226.1,67.1,243.9,67.1z" />
                             <path class="cat-dot"
                               d="M32.3,170.5c17.8,0,32.3-14.5,32.3-32.3c0-17.8-14.5-32.3-32.3-32.3S0,120.4,0,138.2S14.5,170.5,32.3,170.5z" />
                             <path class="cat-dot"
-                              d="M136.8,170.5c17.8,0,32.3-14.5,32.3-32.3c0-17.8-14.5-32.3-32.3-32.3c-17.8,0-32.3,14.5-32.3,32.3    C104.5,156.1,119,170.5,136.8,170.5z" />
+                              d="M136.8,170.5c17.8,0,32.3-14.5,32.3-32.3c0-17.8-14.5-32.3-32.3-32.3c-17.8,0-32.3,14.5-32.3,32.3C104.5,156.1,119,170.5,136.8,170.5z" />
                             <path class="cat-dot"
-                              d="M243,170.5c17.8,0,32.3-14.5,32.3-32.3c0-17.8-14.5-32.3-32.3-32.3s-32.3,14.5-32.3,32.3    C210.7,156.1,225.2,170.5,243,170.5z" />
+                              d="M243,170.5c17.8,0,32.3-14.5,32.3-32.3c0-17.8-14.5-32.3-32.3-32.3s-32.3,14.5-32.3,32.3C210.7,156.1,225.2,170.5,243,170.5z" />
                             <path class="cat-dot"
-                              d="M33,209.1c-17.8,0-32.3,14.5-32.3,32.3c0,17.8,14.5,32.3,32.3,32.3s32.3-14.5,32.3-32.3S50.8,209.1,33,209.1z    " />
+                              d="M33,209.1c-17.8,0-32.3,14.5-32.3,32.3c0,17.8,14.5,32.3,32.3,32.3s32.3-14.5,32.3-32.3S50.8,209.1,33,209.1z" />
                             <path class="cat-dot"
-                              d="M137.6,209.1c-17.8,0-32.3,14.5-32.3,32.3c0,17.8,14.5,32.3,32.3,32.3c17.8,0,32.3-14.5,32.3-32.3    S155.4,209.1,137.6,209.1z" />
+                              d="M137.6,209.1c-17.8,0-32.3,14.5-32.3,32.3c0,17.8,14.5,32.3,32.3,32.3c17.8,0,32.3-14.5,32.3-32.3S155.4,209.1,137.6,209.1z" />
                             <path class="cat-dot"
-                              d="M243.8,209.1c-17.8,0-32.3,14.5-32.3,32.3c0,17.8,14.5,32.3,32.3,32.3c17.8,0,32.3-14.5,32.3-32.3    S261.6,209.1,243.8,209.1z" />
+                              d="M243.8,209.1c-17.8,0-32.3,14.5-32.3,32.3c0,17.8,14.5,32.3,32.3,32.3c17.8,0,32.3-14.5,32.3-32.3S261.6,209.1,243.8,209.1z" />
                           </g>
                         </g>
                       </svg>
@@ -48,11 +47,11 @@
                     <span>Categorias</span>
                   </a>
                   <ul class="cat-submenu">
-                    <li><a [routerLink]="['/course-details']">English Learning</a></li>
-                    <li><a [routerLink]="['/course-details']">Web Development</a></li>
-                    <li><a [routerLink]="['/course-details']">Logo Design</a></li>
-                    <li><a [routerLink]="['/course-details']">Motion Graphics</a></li>
-                    <li><a [routerLink]="['/course-details']">Video Edition</a></li>
+                    <li><a [routerLink]="['/']">English Learning</a></li>
+                    <li><a [routerLink]="['/']">Web Development</a></li>
+                    <li><a [routerLink]="['/']">Logo Design</a></li>
+                    <li><a [routerLink]="['/']">Motion Graphics</a></li>
+                    <li><a [routerLink]="['/']">Video Edition</a></li>
                   </ul>
                 </li>
               </ul>
@@ -69,12 +68,15 @@
                   <a [routerLink]="['/']">Home</a>
                 </li>
                 <li>
-                  <a [routerLink]="['/courses']">Mapa</a>
+                  <a [routerLink]="['/teachers']">Instructores</a>
+                </li>
+                <li>
+                  <a [routerLink]="['/maps']">Mapa</a>
                 </li>
                 <li>
                   <a [routerLink]="['/blog']">Blog</a>
                 </li>
-                <li><a [routerLink]="['/contact']">Contacto</a></li>
+                <li><a [routerLink]="['/contacto']">Contacto</a></li>
               </ul>
             </nav>
           </div>
@@ -84,9 +86,20 @@
               <button type="submit"><i class="fad fa-search"></i></button>
             </form>
           </div>
-          <div class="header__btn ml-20 d-none d-sm-block">
-            <a [routerLink]="['/contact']" class="e-btn">Ingresar</a>
+          <div class="header__btn ml-20  d-sm-block">
+            <div class="dropdown">
+              <a class="dropdown-toggle e-btn" href="#" role="button" id="loginDropdown" data-bs-toggle="dropdown"
+                aria-expanded="false">
+                <img src="../../../../favicon.ico" alt="">
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="loginDropdown">
+                <li><a class="dropdown-item" [routerLink]="['/auth/login']">Ingresar</a></li>
+                <li><a class="dropdown-item" [routerLink]="['/auth/register']">Registrarse</a></li>
+              </ul>
+            </div>
           </div>
+
+
           <div class="sidebar__menu d-xl-none">
             <div (click)="handleSidebar()" class="sidebar-toggle-btn ml-30" id="sidebar-toggle">
               <span class="line"></span>
@@ -100,11 +113,8 @@
   </div>
 </div>
 
-
-
 <div (click)="handleCartClose()" [class.opened]="showCart" class="body-overlay"></div>
 <!-- cart mini area end -->
-
 
 <!-- sidebar area start -->
 <div class="sidebar__area" [class.sidebar-opened]="showSidebar">
@@ -135,10 +145,8 @@
           </li>
 
           <li class="menu-item-has-children" [class.active]="showBlogDropdown">
-
             <a (click)="blogDropdown()" class="border-0">Blog</a>
             <ul class="sub-menu" [class.active]="showBlogDropdown">
-
             </ul>
           </li>
           <li>

@@ -6,6 +6,7 @@ import { HeaderComponent } from './components/header/header.component';
 import { RouterModule } from '@angular/router';
 import { PaginacionComponent } from './components/paginacion/paginacion.component';
 import { MenuComponent } from './components/menu/menu.component';
+import { P404Component } from './components/p404/p404.component';
 
 
 
@@ -15,7 +16,8 @@ import { MenuComponent } from './components/menu/menu.component';
     FooterComponent,
     BreadcrumbsComponent,
     PaginacionComponent,
-    MenuComponent
+    MenuComponent,
+    P404Component
 
   ],
   imports: [
