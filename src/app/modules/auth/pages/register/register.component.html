@@ -31,41 +31,41 @@
           <div class="sign__form">
             <form action="#">
               <div class="sign__input-wrapper mb-25">
-                <h5>Nombre</h5>
+                <h5>Nombre Completo</h5>
                 <div class="sign__input">
-                  <input type="text" placeholder="Full name">
+                  <input type="text" name="name" [(ngModel)]="name" placeholder="nombre completo">
                   <i class="fal fa-user"></i>
                 </div>
               </div>
               <div class="sign__input-wrapper mb-25">
-                <h5>Work email</h5>
+                <h5>Correo personal</h5>
                 <div class="sign__input">
-                  <input type="text" placeholder="e-mail address">
+                  <input type="text" name="email" [(ngModel)]="email" placeholder="correo electronico">
                   <i class="fal fa-envelope"></i>
                 </div>
               </div>
               <div class="sign__input-wrapper mb-25">
-                <h5>Password</h5>
+                <h5>Contraseña</h5>
                 <div class="sign__input">
-                  <input type="text" placeholder="Password">
+                  <input type="text" name="password" [(ngModel)]="password" placeholder="contraseña">
                   <i class="fal fa-lock"></i>
                 </div>
               </div>
               <div class="sign__input-wrapper mb-10">
-                <h5>Re-Password</h5>
+                <h5>Re-Contraseña</h5>
                 <div class="sign__input">
-                  <input type="text" placeholder="Re-Password">
+                  <input type="text" name="re_password" [(ngModel)]="re_password" placeholder="repite contraseña">
                   <i class="fal fa-lock"></i>
                 </div>
               </div>
               <div class="sign__action d-flex justify-content-between mb-30">
                 <div class="sign__agree d-flex align-items-center">
                   <input class="m-check-input" type="checkbox" id="m-agree">
-                  <label class="m-check-label" for="m-agree">Acepta<a >Terms & Conditions</a>
+                  <label class="m-check-label" for="m-agree">Acepta<a>Terms & Conditions</a>
                   </label>
                 </div>
               </div>
-              <button class="e-btn w-100"> <span></span> Sign Up</button>
+              <button class="e-btn w-100" (click)="register()"> <span></span>Registrarse</button>
               <div class="sign__new text-center mt-20">
                 <p>ya tienes una cuenta? <a [routerLink]="['/auth/login']">Ingresa</a></p>
               </div>
@@ -76,3 +76,4 @@
     </div>
   </div>
 </section>
+

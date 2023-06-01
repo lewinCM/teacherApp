@@ -2,10 +2,14 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 import { AuthRoutingModule } from './auth-routing.module';
+
+import { SharedModule } from 'src/app/shared/shared.module';
+import { RouterModule } from '@angular/router';
+
 import { LoginComponent } from './pages/login/login.component';
 import { RegisterComponent } from './pages/register/register.component';
 import { AuthProfileComponent } from './auth-profile.component';
-import { SharedModule } from 'src/app/shared/shared.module';
+import { FormsModule,ReactiveFormsModule } from '@angular/forms';
 
 
 
@@ -19,7 +23,10 @@ import { SharedModule } from 'src/app/shared/shared.module';
   imports: [
     CommonModule,
     AuthRoutingModule,
-    SharedModule
+    SharedModule,
+    RouterModule,
+    FormsModule,
+
 
 
   ],
